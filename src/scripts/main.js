@@ -1,21 +1,14 @@
 'use strict';
 
-let imgLarge = document.getElementById("largeImg"); 
+const imgLarge = document.getElementById("largeImg"); 
 
-document.addEventListener('click', function(event) {
-  let target = event.target;
-  if (target.tagName == 'IMG'){
-    changeImg();
-  }
-  else return;
-});
+const links = document.querySelectorAll('#thumbs a');
+links.forEach((link)=> link.addEventListener('click', 
+  (event) => imageReplacer(event, link)));
 
-function changeImg(){
-  document.querySelectorAll("a").forEach(function(e) {
-    e.onclick = function() {
-      window.event.preventDefault();
-      imgLarge.src = e.getAttribute('href');
-   }
- })
-};
+const imageReplacer = (event, link) => {
+  event.preventDefault();
+  const imageUrl = link.getAttribute('href');
+  imgLarge.src = imageUrl;
+}
 
