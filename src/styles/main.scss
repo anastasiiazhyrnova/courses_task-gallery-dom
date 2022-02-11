@@ -8,19 +8,29 @@ body {
 }
 li {
   list-style-type: none;
-  display:inline-block;
-  margin-left: 5%;
-}
-
-.list-item{
-  width: 19%;
+  display: flex;
   align-items: center;
-}
+  justify-content: center;
+  display:inline-block;
+  margin-left: 2%;
+  }
+.list-item{
+    width: 19%;
+    align-items: center;
+    object-fit: contain;
+  }
+.gallery__list{
+    margin-left: 10%;
+  }
+  #largeImg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 45%;
+    border: 3px solid grey;
+  }
+  img{
+    border: 3px solid grey;
+  }
 
-#largeImg{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 45%;
-}
 
