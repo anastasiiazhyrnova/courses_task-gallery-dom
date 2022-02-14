@@ -2,6 +2,8 @@
 @import "fonts";
 @import "typography";
 
+$colorBorder:  grey;
+
 body {
   margin: 0;
   padding: 0;
@@ -22,15 +24,16 @@ li {
 .gallery__list{
     margin-left: 10%;
   }
+.gallery {
   #largeImg{
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 45%;
-    border: 3px solid grey;
+    border: 3px solid $colorBorder;
   }
-  img{
-    border: 3px solid grey;
-  }
-
+}
+img{
+    border: 3px solid $colorBorder;
+}
 
